@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./Styles/style.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 1rem; text-align: center; color: rgb(204, 204, 204);}
+    .attribution a { color: hsl(0, 0%, 100%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section__images">
+      <img src="./images/illustration-woman-online-mobile.svg" class="section__image1" alt="illustration-woman-online-mobile">
+      <img src="./images/bg-pattern-mobile.svg" class="section__image2" alt="pattern-mobile">
+      <img src="./images/illustration-box-desktop.svg" class="section__image-box" alt="illustration-box-desktop">
+      <img src="./images/bg-pattern-desktop.svg" alt="pattern-desktop" class="section__image1-desktop">
+      <img src="/images/illustration-woman-online-desktop.svg" alt="illustration-woman-online-desktop" class="section__image2-desktop">
+    </div>
+    <div class="container__body">
+      <div class="faq">
+        <h1 class="faq">FAQ</h1>
+      </div>
+      <div class="question1" onclick="change(1)">
+        How many team members can I invite?
+        <div class="icon">
+          <img src="./images/icon-arrow-down.svg" alt="icon" id="icon1">
+        </div>
+      </div>
+      <div class="answer1" id="answer1">
+        You can invite up to 2 additional users on the Free plan. There is no limit on 
+        team members for the Premium plan.
+      </div>
+      <div class="br__bottom"></div>
+      <div class="question2" onclick="change(2)">
+        What is the maximum file upload size?
+        <div class="icon">
+          <img src="./images/icon-arrow-down.svg" alt="icon" id="icon2">
+        </div>
+      </div>
+      <div class="answer2" id="answer2">
+        No more than 2GB. All files in your account must fit your allotted storage space.
+      </div>
+      <div class="br__bottom"></div>
+      <div class="question3" onclick="change(3)">
+        How do I reset my password?
+        <div class="icon">
+          <img src="./images/icon-arrow-down.svg" alt="icon" id="icon3">
+        </div>
+      </div>
+      <div class="answer3" id="answer3">
+        Click “Forgot password” from the login page or “Change password” from your profile page.
+      A reset link will be emailed to you.
+      </div>
+      <div class="br__bottom"></div>
+      <div class="question4" onclick="change(4)">
+        Can I cancel my subscription?
+        <div class="icon">
+          <img src="./images/icon-arrow-down.svg" alt="icon" id="icon4">
+        </div>
+      </div>
+      <div class="answer4" id="answer4">
+        Yes! Send us a message and we’ll process your request no questions asked.
+      </div>
+      <div class="br__bottom"></div>
+      <div class="question5" onclick="change(5)">
+        Do you provide additional support?
+        <div class="icon">
+          <img src="./images/icon-arrow-down.svg" alt="icon" id="icon5">
+        </div>
+      </div>
+      <div class="answer5" id="answer5">
+        Chat and email support is available 24/7. Phone lines are open during normal business hours.
+      </div>
+      <div class="br__bottom-l" style="margin:3rem 0 5rem 0;"></div>
+    </div>
+  </div>
+  <script>
+    function change(n) {
+      for (let i = 1; i < 6; i++) {
+        if(i === n) {
+          if(document.getElementById(`answer${i}`).style.display === "none" || document.getElementById(`answer${i}`).style.display === "") {
+            document.getElementById(`answer${i}`).style.display = "block";
+            document.getElementById(`icon${i}`).style.transform = "rotate(180deg)";
+          }
+          else {
+            document.getElementById(`answer${i}`).style.display = "none";
+            document.getElementById(`icon${i}`).style.transform = "rotate(360deg)";
+          }
+        }
+        else {
+          document.getElementById(`answer${i}`).style.display = "none";
+          document.getElementById(`icon${i}`).style.transform = "rotate(360deg)";
+        }
+      } 
+    }
+  </script>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> 
+    <div class="developer">
+      Coded by <a href="https://github.com/fullstackdev-pro">Ismoil</a>
+    </div>
+  </div>
+</body>
+</html>

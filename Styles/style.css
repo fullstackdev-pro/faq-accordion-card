@@ -1,0 +1,165 @@
+body {
+    font-size: 14px;
+    margin: 0;
+    background: linear-gradient(hsl(273, 75%, 66%) 0%,hsl(240, 73%, 65%) 100%);
+    background-repeat: no-repeat;
+}
+
+.container {  
+    margin: 0 auto;
+}
+
+.container__body {
+    margin: 10rem 2rem 0 2rem;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.container__body > div {
+    padding-left: 1rem;
+    width: 90%;
+    padding-top: 0.5rem;
+}
+
+.section__image1 {
+    position: absolute;
+    right: 4.5rem;
+    top: 3.5rem;
+    z-index: 10;
+}
+
+.section__image2 {
+    position: absolute;
+    right: 4.5rem;
+    top: 10rem;
+    z-index: 9;
+}
+
+.section__image-box {
+    display: none;
+}
+
+.section__image1-desktop {
+    display: none;
+}
+
+.section__image2-desktop {
+    display: none;
+}
+
+.faq {
+    padding-top: 8rem;
+    text-align: center;
+}
+
+.br__bottom {
+    border-bottom: 1px solid rgb(224, 224, 224);
+    margin: 0.1rem 1rem 0.5rem 0.6rem;  
+}
+
+.br__bottom-l {
+    border-bottom: 1px solid rgb(224, 224, 224);
+    margin: 2rem 1rem 0.5rem 0.6rem; 
+    bottom: 1.5rem;
+    position: relative;
+}
+
+.question1,.question2,
+.question3,.question4,
+.question5 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.question1:hover, .question2:hover,
+.question3:hover, .question4:hover,
+.question5:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+.answer1, .answer2,
+.answer3, .answer4,
+.answer5  {
+    display: none;
+}
+
+.attribution {
+    margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 1440px) {
+    .body {
+        background: linear-gradient(hsl(273, 75%, 66%) 0%,hsl(240, 73%, 65%) 100%);
+    }
+    
+    .container {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        background-color: white;
+        border-radius: 15px;
+    }
+
+    .container__body {
+        margin-top: 0;
+        width: 70%;
+    }
+    
+    .container__body > div {
+        display: flex;
+        margin: 0.7rem;
+    }
+
+    .section__image1 {
+        display: none;
+    }
+
+    .section__image2 {
+        display: none;
+    }
+
+    .section__image1-desktop {
+        display: block;
+        position: absolute;
+        width: 34rem;
+        height: 42rem;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    .section__image2-desktop {
+        display: block;
+        position: absolute;
+        width: 27em;
+        height: 26rem;
+        top: 10rem;
+        left: 12rem;
+    }
+
+    .section__image-box {
+        display: block;
+        position: absolute;
+        width: 15rem;
+        left: 7rem;
+        top: 20rem;
+        z-index: 5;
+    }
+
+    .section__images {
+        width: 40%;
+    }
+
+    .faq {
+        margin-top: -2rem;
+    }
+
+    .attribution {
+        margin: 2rem 0 12rem 0;
+    }
+
+    .br__bottom-l {
+        margin-bottom: 12rem;
+    }
+}
